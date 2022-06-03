@@ -56,3 +56,43 @@ nav {
   font-weight: 700;
   transition: all ease 0.4s;
 }
+
+.name{
+  font-family: calibri;
+  position: absolute;
+  width: 500px;
+  left: 20%;
+  top: 50%;
+  transform: translate(-20%,-50%);
+  text-align: center;
+}
+
+.name h1{
+  font-family: Poppins;
+  font-size: 40px;
+  margin: px;
+  letter-spacing: 3px;
+  color: #66fcf1;
+  text-align: center;
+}
+
+.name p{
+  color: #c5c6c7;
+  font-size: 16px;
+}
+
+.join-button{
+  width: 200px;
+  height: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: 2px solid #66fcf1;
+
+}
+
+.join-button:hover{
+  background-color: #151515;
+  transition: all ease 0.2s;
+}
