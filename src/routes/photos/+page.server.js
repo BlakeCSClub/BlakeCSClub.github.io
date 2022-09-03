@@ -24,7 +24,7 @@ export async function load({ params }) {
   } catch {
     try {
       console.log("fail 2")
-      console.log(await readdir(join(cwd(),".svelte-kit","output","client")))
+      console.log(await readdir(join(cwd(),".svelte-kit","server","output")))
     } catch {
       try {
         console.log("fail 3")
