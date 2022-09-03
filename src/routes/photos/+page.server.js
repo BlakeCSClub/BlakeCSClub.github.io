@@ -5,7 +5,7 @@ import { cwd } from 'process';
  
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
-  const images = await readdir(join(cwd(),"club-photos"));
+  const images = await readdir(join(cwd(),"static","club-photos"));
  
   if (images) {
     return images;
