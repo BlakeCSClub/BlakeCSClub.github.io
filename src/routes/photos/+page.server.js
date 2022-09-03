@@ -4,7 +4,7 @@ import { resolve } from 'path';
  
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
-  const images = await readdir(resolve("./static/club-photos"));
+  const images = await readdir(resolve("club-photos"));
  
   if (images) {
     return images;
