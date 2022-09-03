@@ -2,7 +2,6 @@ import { error } from '@sveltejs/kit';
 import { readdir } from 'fs/promises';
 import { join } from 'path';
 import { cwd } from 'process';
-import { glob } from 'glob';
 import { promisify } from 'util';
  
 /** @type {import('./$types').PageServerLoad} */
