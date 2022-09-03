@@ -7,8 +7,9 @@ import { promisify } from 'util';
  
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
-  console.log(cwd());
-  console.log(await (promisify(glob))(cwd()+'/**/*'))
+  // console.log(cwd());
+  // console.log(await (promisify(glob))(cwd()+'/**/*'))
+  console.log(cwd(),readdir(cwd()));
 
   const images = await readdir(join(cwd(),"static","club-photos"));
  
