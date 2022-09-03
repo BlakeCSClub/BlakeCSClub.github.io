@@ -9,13 +9,14 @@ import { promisify } from 'util';
 export async function load({ params }) {
   // console.log(cwd());
   // console.log(await (promisify(glob))(cwd()+'/**/*'))
-  console.log(cwd(),await readdir(cwd()));
+  console.log(cwd(),await readdir(join(cwd(),".svelte-kit","output","client","club-photos")));
 
   // const images = await readdir(join(cwd(),"static","club-photos"));
- 
-  // if (images) {
-  //   return images;
-  // }
+  const images = await readdir(join(cwd(),".svelte-kit","output","client","club-photos"));
+
+  if (images) {
+    return images;
+  }
  
   throw error(404, "Not Found");
 }
