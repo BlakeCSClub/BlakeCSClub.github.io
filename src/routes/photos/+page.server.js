@@ -28,7 +28,7 @@ export async function load({ params }) {
     } catch {
       try {
         console.log("fail 3")
-        console.log(await readdir(join(cwd(),".svelte-kit","output")))
+        console.log(await readdir(join(cwd(),".svelte-kit","server")))
       } catch {
         try {
           console.log("fail 4")
@@ -38,12 +38,6 @@ export async function load({ params }) {
         }
       }
     }
-  }
-
-  try {
-    console.log(await readdir(join(cwd(),"___vc")));
-  } catch {
-    console.log('bruh what')
   }
  
   throw error(404, "Not Found");
