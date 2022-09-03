@@ -11,11 +11,11 @@ export async function load({ params }) {
   // console.log(await (promisify(glob))(cwd()+'/**/*'))
   console.log(cwd(),readdir(cwd()));
 
-  const images = await readdir(join(cwd(),"static","club-photos"));
+  // const images = await readdir(join(cwd(),"static","club-photos"));
  
-  if (images) {
-    return images;
-  }
+  // if (images) {
+  //   return images;
+  // }
  
   throw error(404, "Not Found");
 }
