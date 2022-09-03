@@ -19,21 +19,31 @@ export async function load({ params }) {
     console.log("stuff's still broken")
   }
   try {
+    console.log("fail 1")
     console.log(await readdir(join(cwd(),".svelte-kit","output","client","club-photos")))
   } catch {
     try {
+      console.log("fail 2")
       console.log(await readdir(join(cwd(),".svelte-kit","output","client")))
     } catch {
       try {
+        console.log("fail 3")
         console.log(await readdir(join(cwd(),".svelte-kit","output")))
       } catch {
         try {
+          console.log("fail 4")
           console.log(await readdir(join(cwd(),".svelte-kit")))
         } catch {
           console.log("this is stupid")
         }
       }
     }
+  }
+
+  try {
+    console.log(await readdir(join(cwd(),"___vc")));
+  } catch {
+    console.log('bruh what')
   }
  
   throw error(404, "Not Found");
