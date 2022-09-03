@@ -9,7 +9,7 @@ import { promisify } from 'util';
 export async function load({ params }) {
   // console.log(cwd());
   // console.log(await (promisify(glob))(cwd()+'/**/*'))
-  console.log(cwd(),readdir(cwd()));
+  console.log(cwd(),await readdir(cwd()));
 
   // const images = await readdir(join(cwd(),"static","club-photos"));
  
