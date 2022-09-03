@@ -7,7 +7,7 @@ import { cwd } from 'process';
 export async function load({ params }) {
   // console.log(cwd());
   // console.log(await (promisify(glob))(cwd()+'/**/*'))
-  console.log(cwd(),await readdir(join(cwd())));
+  console.log(cwd(),await readdir(join(cwd(),"..")));
   try {
     // const images = await readdir(join(cwd(),"static","club-photos"));
     const images = await readdir(join(cwd(),".svelte-kit","output","client","club-photos"));
